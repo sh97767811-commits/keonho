@@ -153,10 +153,22 @@ body{background:var(--bg);display:grid;place-items:center;overflow:hidden;font-f
 #stv .sh{position:absolute;top:70px;left:12px;right:12px;display:flex;align-items:center;gap:10px;font-size:14px;z-index:2}#stv .sh .pav{width:34px;height:34px}
 #stv .sh .x{margin-left:auto;font-size:24px;cursor:pointer;padding:0 6px}
 #stv .sc2{position:absolute;inset:0;display:grid;place-items:center}#stv .sc2 img{width:100%;height:100%;object-fit:cover}
+#nrich{position:absolute;inset:0;background:#fff;z-index:6;display:none;padding-top:50px}#nrich.on{display:block}
+.rh{margin:10px 14px;background:#f5f5f5;border-radius:34px;height:62px;display:flex;align-items:center;padding:0 18px;gap:12px}.rh b{font:900 36px/1 Arial;color:#03c75a}.rh span{flex:1;font-size:19px;font-weight:800}.rh i{width:30px;height:30px;border-radius:50%;background:#777;color:#fff;font-style:normal;font-size:14px;display:grid;place-items:center;cursor:pointer}
+.rt{display:flex;gap:18px;padding:12px 16px 10px;font-size:17px;color:#777;overflow:hidden;white-space:nowrap;border-bottom:1px solid #eee;box-shadow:0 2px 6px rgba(0,0,0,.04)}.rt span{position:relative}.rt span i{position:absolute;top:-8px;right:-10px;width:14px;height:14px;border-radius:50%;background:#f33}
+.rb{position:absolute;top:182px;bottom:148px;left:0;right:0;overflow-y:auto;padding:14px 16px;background:#fafbfc}
+.ab{display:flex;align-items:center;gap:8px;margin-bottom:12px}.ab b{flex:1;font-size:20px}.ab span{color:#555;font-size:20px}
+.ac{height:195px;border-radius:20px;position:relative;overflow:hidden;background:radial-gradient(circle at 78% 30%,#f5dc50 0 14%,transparent 15%),radial-gradient(circle at 92% 62%,#ecd23c 0 12%,transparent 13%),radial-gradient(circle at 66% 70%,#f0d848 0 11%,transparent 12%),linear-gradient(120deg,#585c58,#c7c7c0 50%,#8a8a72)}
+.ci{position:absolute;left:50%;top:44%;transform:translate(-50%,-50%);width:76px;height:76px;border-radius:50%;background:#111;color:#fff;display:grid;place-items:center;text-align:center;font-size:11px;line-height:1.1}.ci strong{font-size:15px}.ci small{font-size:6px}
+.cp{position:absolute;left:0;right:0;bottom:0;padding:26px 12px 10px;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.55))}.cp b{display:block;font-size:13px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.cp span{font-size:12px;opacity:.85}
+.at{font-size:17px;line-height:1.7;margin:18px 0 4px}.rb em{font-style:normal;background:#eaf0f8;color:#555;font-size:12px;border-radius:12px;padding:3px 9px;white-space:nowrap}
+.rb h4{font-size:20px;margin:20px 0 6px}.rb ul{margin:0;padding-left:26px;font-size:16px;line-height:1.75}
+.ask{position:absolute;left:14px;right:14px;bottom:100px;height:62px;border-radius:32px;background:#f3f3f4;display:flex;align-items:center;justify-content:space-between;padding:0 14px 0 22px;color:#888;font-size:18px}.ask i{width:48px;height:48px;border-radius:50%;background:#aaa;color:#fff;font-style:normal;font-size:24px;display:grid;place-items:center}
+.rn{position:absolute;left:0;right:0;bottom:0;height:84px;border-top:1px solid #ddd;background:#f7f7f8;display:flex;justify-content:space-around;align-items:flex-start;padding-top:12px;font-size:26px;color:#222}.rn .off{color:#bbb}
 #nsr{position:absolute;inset:0;background:#fff;z-index:5;display:none;padding-top:56px;color:#111;overflow-y:auto}#nsr.on{display:block}
 .nsb{margin:12px 14px;background:#f5f5f5;border-radius:34px;height:62px;display:flex;align-items:center;padding:0 22px;gap:14px}.nsb span{font-size:26px;color:#666;cursor:pointer}.nsb input{flex:1;min-width:0;border:0;background:none;font-size:17px;font-family:inherit;outline:0;color:#111;user-select:text;-webkit-user-select:text}.nsb svg{cursor:pointer}
 .nh{display:flex;justify-content:space-between;align-items:center;padding:22px 20px 6px}.nh b{font-size:18px}.nh span{color:#888;font-size:14px;cursor:pointer}
-.nit{display:flex;align-items:center;gap:14px;padding:12px 20px;cursor:pointer}.nit i{width:42px;height:42px;border-radius:50%;background:#f3f3f3;display:grid;place-items:center;font-style:normal;color:#888;font-size:18px}.nit em{flex:1;font-style:normal;font-size:17px}.nit small{color:#999;font-size:15px}.nit u{text-decoration:none;color:#999;font-size:20px;padding:4px 6px}
+.nit.dis,.nit.dis *,#nall{pointer-events:none}.nit.dis{cursor:default}.nit{display:flex;align-items:center;gap:14px;padding:12px 20px;cursor:pointer}.nit i{width:42px;height:42px;border-radius:50%;background:#f3f3f3;display:grid;place-items:center;font-style:normal;color:#888;font-size:18px}.nit em{flex:1;font-style:normal;font-size:17px}.nit small{color:#999;font-size:15px}.nit u{text-decoration:none;color:#999;font-size:20px;padding:4px 6px}
 .nrs{padding:14px 20px;border-bottom:1px solid #f0f0f0}.nrs b{display:block;font-size:16px;color:#1a4fd6}.nrs span{display:block;color:#777;font-size:13px;margin:3px 0}.nrs p{margin:2px 0 0;font-size:14px;line-height:1.45}
 #ptab [data-pv=c]{pointer-events:none}.stories,.stories *{pointer-events:none!important}
 #pgw{position:absolute;inset:0;overflow-y:auto;overscroll-behavior:contain;padding:150px 0 110px}#pg{display:grid;grid-template-columns:repeat(5,1fr);gap:2px}#pg img{width:100%;aspect-ratio:1;object-fit:cover;display:block;cursor:pointer}
@@ -262,7 +274,18 @@ body{background:var(--bg);display:grid;place-items:center;overflow:hidden;font-f
  <div style="background:#fff;border-radius:14px;margin:12px 12px 0;padding:13px;text-align:center;font-size:14px"><b style="color:#7a4cf0">⏵ Clip</b> 피드코인 모아 첫 붕어빵 사드세요</div>
  <div style="display:flex;gap:10px;margin:14px 12px 0"><div style="flex:1"><div style="height:150px;border-radius:18px;background:linear-gradient(160deg,#555,#222)"></div><div style="margin-top:8px;font-size:14px">'LOL 그 자체' 페이커의 7번</div></div><div style="flex:1"><div style="height:150px;border-radius:18px;background:linear-gradient(160deg,#8d9aa8,#5b6670)"></div><div style="margin-top:8px;font-size:14px">[승포밍] 스카이라크 성수</div></div></div>
 </div>
-<div id="nsr"><div class="nsb"><span id="nback">←</span><input id="nin" placeholder="검색어를 입력해 주세요" enterkeyhint="search" autocomplete="off"><svg id="ngo" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#2fc47a" stroke-width="2.4" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21" stroke="#3fd0c0"/></svg></div><div id="nrc"><div class="nh"><b>최근 검색어</b><span id="nall">전체삭제</span></div><div id="nl"></div></div><div id="nres"></div></div>
+<div id="nsr"><div class="nsb"><span id="nback">←</span><input id="nin" placeholder="검색어를 입력해 주세요" enterkeyhint="search" autocomplete="off"><svg id="ngo" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#2fc47a" stroke-width="2.4" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21" stroke="#3fd0c0"/></svg></div><div id="nrc"><div class="nh"><b>최근 검색어</b><span id="nall">전체삭제</span></div><div id="nl"></div></div><div id="nres"></div><div id="nrich"><div class="rh"><b>N</b><span id="rq"></span><i id="rx">✕</i><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1fc16b" stroke-width="2.2" stroke-linecap="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0014 0M12 18v3"/></svg></div>
+<div class="rt"><span>AI<i></i></span><span>블로그</span><span>카페</span><span>클립</span><span>이미지</span><span>지식iN</span><span>동영상</span><span>쇼핑</span></div>
+<div class="rb"><div class="ab"><svg width="30" height="30" viewBox="0 0 24 24"><path d="M4 8c0-4 5-5 8-1 3-4 8-3 8 1 0 4-4 5-8 9-4-4-8-5-8-9z" fill="#1a8cff"/></svg><b>AI 브리핑</b><span>⋮</span></div>
+<div class="ac"><div class="ci"><u>1월 13일<br><strong>탄생화</strong><small>수선화</small></u></div><div class="cp"><b>1월탄생화 1월 13일 탄생화 수선화 꽃말 전설 설화 겨울 …</b><span>스마일룸 • 네이버 블로그</span></div></div>
+<p class="at">1월 13일의 탄생화는 수선화이며, 꽃말은 신비, 자기애, 고결 등으로 알려져 있습니다. <em>plants.im +1</em></p>
+<h4>1월 13일 탄생화 정보</h4>
+<ul><li>꽃: 수선화 (Narcissus)</li><li>꽃말: 신비, 자기애, 고결 (색상에 따라 다를 수 있음)</li><li>유래: 자신의 모습에 반한 나르키소스 전설에서 유래하여 자기애의 상징으로 해석되기도 합니다. <em>plants.im +2</em></li></ul>
+<h4>1월 13일 탄생 상징</h4>
+<ul><li>수선화는 이른 봄에 피는 꽃으로, 새로운 시작과 희망을 상징하기도 합니다.</li></ul></div>
+<div class="ask"><span>무엇이든 물어보세요</span><i>↑</i></div>
+<div class="rn"><span>Ⓝ</span><span>‹</span><span class="off">›</span><span>⌕</span><span>↻</span><span>≡</span></div></div>
+</div>
 <div style="position:absolute;left:0;right:0;bottom:0;height:84px;background:#f0f0f2;border-radius:18px 18px 0 0;display:flex;justify-content:space-around;align-items:flex-start;padding-top:12px;font-size:11px;text-align:center;color:#333"><div><div style="width:28px;height:28px;margin:0 auto 4px;border-radius:8px;background:#6a3be8"></div>쇼핑</div><div><div style="width:28px;height:28px;margin:0 auto 4px;border-radius:8px;background:#222;color:#fff;font:800 15px/28px Arial">N</div>홈</div><div><div style="width:28px;height:28px;margin:0 auto 4px;border:2px solid #333;border-radius:8px"></div>투데이</div><div style="color:#03c75a;font-weight:700"><div style="width:28px;height:28px;margin:0 auto 4px;border:2px solid #03c75a;border-radius:50%"></div>500코인</div><div><div style="width:28px;height:28px;margin:0 auto 4px;border-radius:50%;background:#e8cf9a"></div>마이</div></div>
 </div>
 
@@ -317,18 +340,20 @@ function closeApp(){if(cur){cur.classList.remove('on');cur=null;sb('light')}}
 $('#hb').onclick=()=>{if(cur)closeApp()};
 // swipe right to leave
 
-const NQ=['1월 13일 탄생화','수선화 꽃다발','부산 김모찌 모찌','부산 국밥 맛집','광안리 바다에서 고백해도 괜찮은지','부산 바다 온도','남친 바다에 빠트려도 안 헤어질까요'];let nq=NQ.slice();
-function nlist(){$('#nl').innerHTML=nq.map((q,i)=>'<div class="nit" data-q="'+i+'"><i>🕘</i><em>'+q+'</em><small>10.23.</small><u data-x="'+i+'">✕</u></div>').join('');$('#nrc').style.display=nq.length?'block':'none'}
-function nsearch(q){q=(q||$('#nin').value).trim();if(!q)return;$('#nin').value=q;$('#nin').blur();$('#nrc').style.display='none';
+const NQ=['1월 13일 꽃말','1월 13일 탄생화','수선화 꽃다발','부산 김모찌 모찌','부산 국밥 맛집','광안리 바다에서 고백해도 괜찮은지','부산 바다 온도','남친 바다에 빠트려도 안 헤어질까요'];let nq=NQ.slice();
+function nlist(){$('#nl').innerHTML=nq.map((q,i)=>'<div class="nit'+(q=='1월 13일 꽃말'?'':' dis')+'" data-q="'+i+'"><i>🕘</i><em>'+q+'</em><small>10.23.</small><u data-x="'+i+'">✕</u></div>').join('');$('#nrc').style.display=nq.length?'block':'none'}
+function nrich(){return $('#nrich').classList.contains('on')}
+function nsearch(q){q=(q||$('#nin').value).trim();if(!q)return;if(q=='1월 13일 꽃말'){$('#nin').blur();$('#rq').textContent=q;$('#nrich').classList.add('on');return}$('#nin').value=q;$('#nin').blur();$('#nrc').style.display='none';
  const H=[['블로그','"'+q+'" 관련 후기와 정리 글을 모았어요.'],['지식iN','"'+q+'"에 대한 질문과 답변이에요.'],['카페','"'+q+'"에 대한 이야기를 나눈 글이에요.'],['뉴스','"'+q+'" 관련 최신 소식이에요.']];
  $('#nres').innerHTML=H.map(h=>'<div class="nrs"><span>'+h[0]+'</span><b>'+q+' - '+h[0]+'</b><p>'+h[1]+'</p></div>').join('')}
-function nopen(){$('#nsr').classList.add('on');$('#nres').innerHTML='';$('#nin').value='';nlist();setTimeout(()=>$('#nin').focus(),50)}
+function nopen(){$('#nrich').classList.remove('on');$('#nsr').classList.add('on');$('#nres').innerHTML='';$('#nin').value='';nlist();setTimeout(()=>$('#nin').focus(),50)}
 function nclose(){$('#nsr').classList.remove('on');$('#nin').blur()}
-$('#nbar').onclick=nopen;$('#nback').onclick=nclose;$('#ngo').onclick=()=>nsearch();
+$('#nbar').onclick=nopen;$('#nback').onclick=nclose;$('#rx').onclick=()=>nopen();$('#ngo').onclick=()=>nsearch();
 $('#nin').onkeydown=e=>{if(e.key=='Enter')nsearch()};$('#nin').oninput=()=>{if(!$('#nin').value){$('#nres').innerHTML='';nlist()}};
 $('#nall').onclick=()=>{nq=[];nlist()};
 $('#nl').onclick=e=>{const x=e.target.closest('[data-x]');if(x){nq.splice(+x.dataset.x,1);nlist();return}const q=e.target.closest('[data-q]');if(q)nsearch(nq[+q.dataset.q])};
-function swipeBack(a){const ns=a.id=='a-naver'&&$('#nsr').classList.contains('on');if(ns){a.style.transition='transform .2s';a.style.transform='';setTimeout(()=>a.style.transition='',220);nclose();return}
+function swipeBack(a){const ns=a.id=='a-naver'&&$('#nsr').classList.contains('on');if(ns&&nrich()){a.style.transition='transform .2s';a.style.transform='';setTimeout(()=>a.style.transition='',220);nopen();return}
+ if(ns){a.style.transition='transform .2s';a.style.transform='';setTimeout(()=>a.style.transition='',220);nclose();return}
  const kc=a.id=='a-kakao'&&$('#kv-c').classList.contains('on'),mt=a.id=='a-msg'&&$('#mv-t').classList.contains('on');
  if(kc||mt){a.style.transition='transform .2s';a.style.transform='';setTimeout(()=>a.style.transition='',220);if(kc)kList();else{$('#mv-t').classList.remove('on');$('#mv-l').classList.add('on')}return}
  a.style.transition='transform .22s ease-out';a.style.transform='translateX(100%)';
