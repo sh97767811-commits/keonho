@@ -444,7 +444,7 @@ const IC={"heart": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#111\" str
 const DFA='<svg viewBox="0 0 24 24" style="width:100%;height:100%;display:block"><rect width="24" height="24" fill="#efeff1"/><circle cx="12" cy="9.500" r="4.200" fill="#8e8e93"/><path d="M3.500 25c0-5.500 3.800-8.500 8.500-8.500s8.500 3 8.500 8.500z" fill="#8e8e93"/></svg>';
 const AVI=k=>k?'<img src="'+I[k]+'">':DFA;
 const VER='<svg width="15" height="15" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#3897f0"/><path d="M7 12.500l3.200 3.200L17 9" stroke="#fff" stroke-width="2.600" fill="none"/></svg>';
-const STO=[{n:'내 스토리',av:'a9',own:1,img:'a9',t:'2시간'},{n:'se0nqhyxon',av:'a10',img:'a10',t:'1시간'},{n:'주훈',av:'a8',img:'a8',t:'4시간'},{n:'miiinjuun',av:null,img:null,t:'30분'}];
+const STO=[{n:'내 스토리',av:'a9',own:1,img:'a9',t:'2시간'},{n:'se0nqhyxon',av:'a10',img:'a10',t:'1시간'},{n:'juhxon',av:'a8',img:'a8',t:'4시간'},{n:'miiinjuun',av:null,img:null,t:'30분'}];
 function drawSt(){$('#igst').innerHTML=STO.map((s,i)=>'<div class="st" data-s="'+i+'"><div class="ring'+(s.seen?' seen':'')+'"><div>'+AVI(s.av)+'</div></div>'+(s.own?'<div class="plus">+</div>':'')+'<span>'+s.n+'</span></div>').join('')}
 drawSt();
 let sti=0,stm=null;
@@ -459,7 +459,7 @@ function post(o){const n=o.imgs.length;let m=n>1?'<div class="pm"><div class="ca
  '<div class="act">'+heart(o.liked)+IC.cm+IC.rp+IC.sd+'<b style="font-size:14px;margin-left:-8px">'+(o.sends||'')+'</b><span class="g"></span>'+IC.bk+'</div>'+(o.lk?likes(o.lk[1],o.lk[0]):'<div class="lkl">좋아요 <b>1,284</b>개</div>')+(o.cap?'<div class="cap"><b>'+o.n+'</b> '+o.cap+'</div>':'')+'<div class="tmx">'+o.t+'</div></div>'}
 $('#igp').innerHTML=post({n:'se0nqhyxon',av:'a10',imgs:[I.ig3],liked:1,lk:['miiinjuun',null],t:'3시간 전',sends:'1'})+
  post({n:'miiinjuun',av:null,imgs:[],black:1,cap:'블랙은 나의 퍼컬. ㅋ',lk:['se0nqhyxon','a10'],t:'5시간 전'})+
- post({n:'kxu.no',av:'a9',imgs:[I.ig5,I.ig6,I.ig7],cap:'초코 ♡ 나',liked:1,lk:['se0nqhyxon','a10'],t:'어제'})+
+ post({n:'kxu.no',av:'a9',imgs:[I.ig5,I.ig6,I.ig7],cap:'쿠키 ♡ 나',liked:1,lk:['se0nqhyxon','a10'],t:'어제'})+
  '<div class="cu"><span style="width:30px;height:30px;border-radius:50%;border:2px solid #f58529;display:grid;place-items:center;color:#f58529">✓</span>팔로우하는 계정의 최신 게시물을 모두 확인했습니다.</div><div class="cu">회원님을 위한 추천<a>지난 게시물</a></div>'+
  post({n:'new__eats',av:'ne',ver:1,sub:'광고',fol:1,imgs:[I.ad],cap:'<span style="color:#3b5bdb">#배스킨라빈스 #신메뉴 #재출시</span>',t:'광고'});
 I.ne='data:image/svg+xml;utf8,'+encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><circle cx="32" cy="32" r="32" fill="#000"/><text x="32" y="29" font-size="13" font-weight="900" font-style="italic" text-anchor="middle" fill="#ff3b30" font-family="Arial">NEW</text><text x="32" y="44" font-size="13" font-weight="900" font-style="italic" text-anchor="middle" fill="#ff9500" font-family="Arial">EATS</text></svg>');
