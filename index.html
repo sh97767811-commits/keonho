@@ -188,8 +188,8 @@ body{background:var(--bg);display:grid;place-items:center;overflow:hidden;font-f
 .pkh{display:flex;align-items:center;justify-content:space-between;padding:14px 18px 6px;font-size:21px;font-weight:700}.pkh i{font-style:normal;font-size:30px;font-weight:300;cursor:pointer;width:34px}
 .pkt{display:flex;gap:10px;padding:14px 16px 6px}.pkt div{flex:1;background:#1c1c1e;border:1px solid #2c2c2e;border-radius:12px;height:100px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;font-size:15px;pointer-events:none}.pkt em{font-style:normal;font-size:34px}
 .pkr{display:flex;justify-content:space-between;align-items:center;padding:14px 16px;font-size:21px;font-weight:700}.pkr span{background:#1c1c1e;border-radius:20px;padding:9px 18px;font-size:16px;font-weight:600;pointer-events:none}
-.pkg{flex:1;overflow-y:auto;overscroll-behavior:contain;display:grid;grid-template-columns:repeat(3,1fr);gap:2px;align-content:start}.pkg>div{aspect-ratio:9/16;background:#1c1c1e;overflow:hidden;cursor:pointer}.pkg img{width:100%;height:100%;object-fit:cover;display:block}.pkg .cam{display:grid;place-items:center;cursor:default;font-size:38px}
-#ighed{background:#000}.hcv{position:absolute;left:0;right:0;top:100px;bottom:118px;border-radius:26px;overflow:hidden;background:#111}.hcv img{width:100%;height:100%;object-fit:cover;display:block}
+.pkg{flex:1;overflow-y:auto;overscroll-behavior:contain;display:grid;grid-template-columns:repeat(3,1fr);gap:2px;align-content:start}.pkg>div{aspect-ratio:3/4;background:#1c1c1e;overflow:hidden;cursor:pointer}.pkg img{width:100%;height:100%;object-fit:cover;display:block}.pkg .cam{display:grid;place-items:center;cursor:default;font-size:38px}
+#ighed{background:#000}.hcv{position:absolute;left:0;right:0;top:100px;bottom:118px;border-radius:26px;overflow:hidden;background:#111}.hcv img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block}.hcv img.bg{object-fit:cover;filter:blur(28px) brightness(.7);transform:scale(1.25)}
 .hcv .hx{position:absolute;left:50%;top:44%;transform:translate(-50%,-50%);font-size:30px;font-weight:800;text-align:center;max-width:86%;text-shadow:0 2px 10px rgba(0,0,0,.6);word-break:break-all;cursor:pointer}
 .hbt{position:absolute;width:50px;height:50px;border-radius:50%;background:rgba(40,40,44,.85);display:grid;place-items:center;font-size:22px;font-weight:600;cursor:pointer;z-index:3}
 .hmc{position:absolute;top:104px;left:50%;transform:translateX(-50%);z-index:3;background:rgba(40,40,44,.92);border-radius:28px;padding:9px 14px;display:none;align-items:center;gap:10px;font-size:17px;max-width:70%;white-space:nowrap}.hmc.on{display:flex}.hmc u{text-decoration:none;font-size:22px}.hmc span{overflow:hidden;text-overflow:ellipsis}.hmc b{width:20px;height:20px;border-radius:50%;background:#fff;color:#222;font-size:13px;display:grid;place-items:center;flex:none}
@@ -293,7 +293,7 @@ body{background:var(--bg);display:grid;place-items:center;overflow:hidden;font-f
 <div class="ov" id="igpick"><div class="pkh"><i id="pkx">✕</i><span>스토리에 추가</span><i style="font-size:26px;pointer-events:none">⚙</i></div>
  <div class="pkt"><div><em>🔁</em>직접 추가</div><div><em>🎵</em>음악</div><div><em>🖼️</em>콜라주</div></div>
  <div class="pkr"><span style="background:none;padding:0;font-size:21px">최근 항목 ⌄</span><span>선택</span></div><div class="pkg" id="pkg"></div></div>
-<div class="ov" id="ighed"><div class="hcv"><img id="hmg"><div class="hx" id="hxt"></div></div>
+<div class="ov" id="ighed"><div class="hcv"><img class="bg" id="hbg"><img id="hmg"><div class="hx" id="hxt"></div></div>
  <div class="hbt" id="hbx" style="left:14px;top:106px;font-size:26px;font-weight:300">✕</div>
  <div class="hmc" id="hmc"><u>🎵</u><span id="hmt"></span><b id="hmx">✕</b></div>
  <div class="hbt" id="hbaa" style="right:14px;top:120px">Aa</div><div class="hbt" style="right:14px;top:182px;pointer-events:none;font-size:24px">☺</div><div class="hbt" id="hbmu" style="right:14px;top:244px;font-size:26px">♪</div><div class="hbt" style="right:14px;top:306px;pointer-events:none;font-size:22px">✦</div>
@@ -571,7 +571,7 @@ function pickClose(){ov('igpick',false);sb('dark')}
 function edClose(){ov('ighed',false);$('#htx').classList.remove('on');$('#hms').classList.remove('on')}
 $('#igst').addEventListener('click',e=>{if(e.target.closest('.st.own'))pickOpen()});
 $('#pkx').onclick=pickClose;
-$('#pkg').onclick=e=>{const g=e.target.closest('[data-g]');if(!g)return;spk=+g.dataset.g;smu='';stx2='';$('#hmg').src=GP[spk];$('#hxt').textContent='';$('#hmc').classList.remove('on');ov('ighed',true)};
+$('#pkg').onclick=e=>{const g=e.target.closest('[data-g]');if(!g)return;spk=+g.dataset.g;smu='';stx2='';$('#hmg').src=GP[spk];$('#hbg').src=GP[spk];$('#hxt').textContent='';$('#hmc').classList.remove('on');ov('ighed',true)};
 $('#hbx').onclick=edClose;
 $('#hbaa').onclick=()=>{$('#hti').value=stx2;$('#htx').classList.add('on');setTimeout(()=>$('#hti').focus(),50)};
 const txDone=()=>{stx2=$('#hti').value.trim();$('#hxt').textContent=stx2;$('#htx').classList.remove('on');$('#hti').blur()};
