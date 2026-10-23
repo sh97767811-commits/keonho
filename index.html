@@ -561,7 +561,7 @@ drawSt();
  $('#alm').innerHTML=L.map(a=>'<div class="alr"><div><div class="tm2">'+pad(a[0])+':'+pad(a[1])+'</div><div class="lb">알람, 수, 토 및 일</div></div><div class="tg"><i></i></div></div>').join('');
  $('#alm').onclick=e=>{const g=e.target.closest('.tg');if(g)g.parentNode.classList.toggle('off')}})();
 // ---- instagram: story upload + DM scenario
-let spk=-1,smu='',stx2='',dmS={n:0,busy:false,lock:false,arrived:false,read:false};
+let spk=-1,smu='',stx2='',dmS={n:0,busy:false,lock:false,arrived:true,read:true,bnDone:false};
 $('#hav').src=I.a9;$('#dmav').innerHTML='<img src="'+I.a9+'">';$('#chav').src=I.a10;$('#bnav').src=I.a10;
 $('#igdm').insertAdjacentHTML('beforeend','<div class="dnav">'+$('#ign').innerHTML.replace('id="ignp"','').replace('nb on','nb')+'</div>');$$('.dnav .nb')[2].classList.add('on');$$('.dnav img').forEach(i=>i.src=I.a9);
 $('#pkg').innerHTML='<div class="cam"><span>📷</span></div>'+GP.map((s,i)=>'<div data-g="'+i+'"><img src="'+s+'"></div>').join('');
@@ -579,18 +579,19 @@ $('#htd').onclick=txDone;$('#hti').onkeydown=e=>{if(e.key=='Enter')txDone()};$('
 $('#hbmu').onclick=()=>$('#hms').classList.toggle('on');
 $('#hms').onclick=e=>{const m=e.target.closest('[data-m]');if(!m)return;smu=m.dataset.m;$('#hmt').textContent=smu;$('#hmc').classList.add('on');$('#hms').classList.remove('on')};
 $('#hmx').onclick=()=>{smu='';$('#hmc').classList.remove('on')};
-$('#hbme').onclick=()=>{const k=spk;edClose();pickClose();STO[0].posted=true;STO[0].seen=false;drawSt();toast('스토리에 공유되었어요');if(k==2&&!dmS.arrived)setTimeout(dmArrive,2300)};
+$('#hbme').onclick=()=>{const k=spk;edClose();pickClose();STO[0].posted=true;STO[0].seen=false;drawSt();toast('스토리에 공유되었어요');if(k==2&&!dmS.bnDone)setTimeout(dmArrive,2300)};
 function dmThreads(){const o=[];if(dmS.arrived)o.push('<div class="dmr'+(dmS.read?'':' nw')+'" data-t="sh"><div class="pv"><img src="'+I.a10+'"></div><div class="dtx"><b>엄성현</b><span>'+(dmS.last||'회원님의 스토리에 답장을 보냈습니다: 야 너 미쳤냐? 안 내려?')+' · '+(dmS.last?dmS.lt:'방금')+'</span></div>'+(dmS.read?'':'<i class="dbl"></i>')+'</div>');
  o.push('<div class="dmr dis"><div class="pv"><img src="'+I.a8+'"></div><div class="dtx"><b>주훈</b><span>ㅇㅇ 알겠음 · 3일</span></div></div>','<div class="dmr dis"><div class="pv">'+DFA+'</div><div class="dtx"><b>miiinjuun</b><span>사진을 보냈습니다. · 1주</span></div></div>');
  $('#dml').innerHTML=o.join('')}
 function dmOpen(){dmThreads();ov('igdm',true)}
 $$('#ign .nb')[2].onclick=dmOpen;
 $$('.dnav .nb')[0].onclick=()=>ov('igdm',false);
-function dmArrive(){dmS.arrived=true;dmThreads();$('#bn').classList.add('on');clearTimeout(dmS.bt);dmS.bt=setTimeout(()=>$('#bn').classList.remove('on'),6500)}
+function dmArrive(){dmS.bnDone=true;dmS.arrived=true;if(!dmS.n)dmS.read=false;dmThreads();$('#bn').classList.add('on');clearTimeout(dmS.bt);dmS.bt=setTimeout(()=>$('#bn').classList.remove('on'),6500)}
 $('#bn').onclick=()=>{$('#bn').classList.remove('on');if(!cur||cur.id!='a-insta')openApp('insta',$$('.ai')[3]);dmOpen();chatOpen()};
 function cm(me,txt,av){return '<div class="cm'+(me?' me':'')+'">'+(me?'':'<div class="ca'+(av?' v':'')+'"><img src="'+I.a10+'"></div>')+'<div class="cb">'+txt+'</div></div>'}
 function chatDraw(){let h='<div class="ctm">오늘 '+clk()+'</div><div class="crl">회원님의 스토리에 답장을 보냈습니다</div><div class="crs"><img src="'+(GP[2])+'"></div>'+cm(0,'야 너 미쳤냐? 안 내려?',1);(dmS.log||[]).forEach(x=>{h+=cm(x[0]=='me'?1:0,x[1],1)});$('#chb').innerHTML=h;$('#chb').scrollTop=1e7}
 function chatOpen(){dmS.read=true;dmThreads();chatDraw();ov('igchat',true);$('#cin').classList.toggle('lock',dmS.lock);$('#cti').disabled=dmS.lock}
+$('#dml').onclick=e=>{if(e.target.closest('[data-t=sh]'))chatOpen()};
 $('#chbk').onclick=()=>{ov('igchat',false);dmThreads()};
 $('#cti').oninput=()=>$('#cin').classList.toggle('typing',!!$('#cti').value.trim());
 function chatSend(){const v=$('#cti').value.trim();if(!v||dmS.busy||dmS.lock)return;dmS.log=dmS.log||[];dmS.log.push(['me',v.replace(/</g,'&lt;')]);$('#cti').value='';$('#cin').classList.remove('typing');chatDraw();dmS.busy=true;dmS.n++;const n=dmS.n;
